@@ -1,0 +1,19 @@
+.nav {
+    text-align: center;
+    width: 200px;
+    background-color: rgb(247, 186, 95);
+    grid-area: n;
+}
+.item{
+    border-bottom:  rgba(44, 26, 0, 0.3) 2px solid;
+}
+.nav__link{
+    color: rgb(14, 83, 143);
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    padding: 20px;
+}
+.active{
+    color: rgb(8, 184, 160);
+}
