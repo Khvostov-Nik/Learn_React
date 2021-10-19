@@ -2,6 +2,7 @@ import React from "react";
 import s from "./Post.module.css";
 
 const Post = (props) => {
+  
   return (
     <div className={s.item}>
       <img
@@ -11,7 +12,7 @@ const Post = (props) => {
       />
       {props.message}
       <div>
-        <span>Like</span>
+        <span>Like {props.likeCount}</span>
       </div>
     </div>
   );
