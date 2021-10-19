@@ -4,24 +4,32 @@
 }
 
 .dialogs_items {
-    padding-left: 20px;
+
     margin-right: 40px;
 }
 
 .dialog {
-    margin: 20px;
-    padding: 5px;
+
     border-bottom: 1px solid #000;
-    font-size: 20px;
-    color: lavender;
+
 }
-.active{
-    color: rgb(0,0,0);
+
+.dialog_link {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: lavender;
+    font-size: 20px;
+
+}
+
+.active {
+    color: rgb(0, 0, 0);
 }
 
 .messages {
     padding-top: 20px;
-}  
+}
 
 .message {
     text-align: center;
