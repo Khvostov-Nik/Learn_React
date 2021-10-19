@@ -23,6 +23,7 @@ const App = (props) => {
           <Route path="/Setting" component={Setting} />
         </div>
       </div>
+      <div className="ddd"></div>
     </BrowserRouter>
   );
 };
