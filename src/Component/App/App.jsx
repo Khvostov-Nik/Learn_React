@@ -22,7 +22,6 @@ const App = (props) => {
           <Route path="/Music" component={Music} />
           <Route path="/Setting" component={Setting} />
         </div>
-        <div className="dd"></div>
       </div>
     </BrowserRouter>
   );
