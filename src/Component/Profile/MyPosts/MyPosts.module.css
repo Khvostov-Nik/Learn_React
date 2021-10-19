@@ -1,3 +1,22 @@
 .posts {
     margin-left: 30px;
+    margin-bottom: 20px;
+}
+.add_post{
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+.myPost_title{
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.add_post__area{
+    display: block;
+    margin-bottom: 10px;
+}
+.add_post__btn{
+    padding: 10px;
 }
