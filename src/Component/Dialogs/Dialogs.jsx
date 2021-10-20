@@ -26,6 +26,7 @@ const Dialogs = (props) => {
         <Dialog id={dialogsData[2].id} name={dialogsData[2].name} />
         <Dialog id={dialogsData[3].id} name={dialogsData[3].name} />
       </div>
+      <div className={s.line}></div>
       <div className={s.messages}>
         <Messages id={MessagesData[0].id} message={MessagesData[0].message} />
         <Messages id={MessagesData[1].id} message={MessagesData[1].message} />
