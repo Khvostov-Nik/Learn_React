@@ -10,7 +10,7 @@
 }
 
 .dialog {
-    border: 2px solid rgba(65, 77, 245, 0.8);
+    border: 2px solid rgb(65, 77, 245);
     border-radius: 10px;
     margin-bottom: 10px;
 }
@@ -38,11 +38,11 @@
     text-align: center;
     padding: 10px;
     margin-bottom: 10px;
-    border: 2px solid rgba(65, 77, 245, 0.8);
+    border: 2px solid rgb(65, 77, 245);
     border-radius: 10px;
 }
 .line{
-    border-left: 2px solid rgba(65, 77, 245, 0.8);
+    border-left: 2px solid rgb(65, 77, 245);
     height: 100%;
     max-width: 2px;
 }
