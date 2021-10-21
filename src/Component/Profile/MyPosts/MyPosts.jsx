@@ -7,6 +7,7 @@ const MyPosts = (props) => {
   let posts = [
     { id: 1, message: "Lorem ipsum dolor sit amet consectetur." , likeCount :'12'},
     { id: 2, message: "Lorem ipsum dolor sit." , likeCount:'8'},
+    { id: 3, message: "Lorem ipsum dolor sit amet.." , likeCount:'11'},
   ];
 
 
