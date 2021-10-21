@@ -3,10 +3,19 @@ import s from "./MyPosts.module.css";
 import Post from "./Post/Post";
 
 const MyPosts = (props) => {
-  let myPosts = [
+  
+  let posts = [
     { id: 1, message: "Lorem ipsum dolor sit amet consectetur." , likeCount :'12'},
-    { id: 2, message: "Lorem ipsum dolor sit." , likeCount:'3'},
+    { id: 2, message: "Lorem ipsum dolor sit." , likeCount:'8'},
   ];
+
+
+  let postsElements = posts.map((post) => {
+    return (
+    <Post message={post.message} likeCount={post.likeCount} />
+    )
+  });
+
   return (
     <div>
       <div className={s.add_post}>
@@ -17,8 +26,7 @@ const MyPosts = (props) => {
         </div>
       </div>
       <div className={s.posts}>
-        <Post message={myPosts[0].message} likeCount={myPosts[0].likeCount} />
-        <Post message={myPosts[1].message} likeCount={myPosts[1].likeCount} />
+        {postsElements}
       </div>
     </div>
   );
