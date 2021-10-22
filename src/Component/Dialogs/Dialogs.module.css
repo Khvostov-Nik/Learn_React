@@ -9,40 +9,8 @@
     margin-right: 10px;
 }
 
-.dialog {
-    border: 2px solid rgb(65, 77, 245);
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-.dialog_link {
-    display: block;
-    padding: 20px;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-size: 20px;
-
-}
-
-.active {
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-}
-
 .messages {
     padding: 20px;
     background-color:  rgb(161, 209, 253);
 }
 
-.message {
-    text-align: center;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 2px solid rgb(65, 77, 245);
-    border-radius: 10px;
-}
-.line{
-    border-left: 2px solid rgb(65, 77, 245);
-    height: 100%;
-    max-width: 2px;
-}
