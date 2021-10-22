@@ -10,7 +10,7 @@ let state = {
       { id: 3, message: "Lorem ipsum dolor sit amet..", likeCount: "11" },
     ],
   },
-  messagesPage: {
+  dialogPage: {
     dialogs: [
       { id: 1, name: "Kolayn" },
       { id: 2, name: "Dimych" },
