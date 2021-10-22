@@ -7,12 +7,10 @@ import Dialogs from "./../Dialogs/Dialogs";
 import News from "./../News/News";
 import Music from "./../Music/Music";
 import Setting from "./../Setting/Setting";
-import { BrowserRouter, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 
 const App = (props) => {
-  
   return (
-    <BrowserRouter>
       <div className="app-wraper">
         <Header />
         <Navbar />
@@ -24,7 +22,6 @@ const App = (props) => {
           <Route path="/Setting" render = { () => ( <Setting /> ) } />
         </div>
       </div>
-    </BrowserRouter>
   );
 };
 
