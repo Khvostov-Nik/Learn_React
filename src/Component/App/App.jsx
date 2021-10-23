@@ -20,7 +20,7 @@ const App = (props) => {
           <Route path="/News" render = { () => ( <News /> ) } />
           <Route path="/Music" render = { () => ( <Music /> ) } />
           <Route path="/Setting" render = { () => ( <Setting /> ) } />
-        </div><div className="ff"></div>
+        </div>
       </div>
   );
 };
