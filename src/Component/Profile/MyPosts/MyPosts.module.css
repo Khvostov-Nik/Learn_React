@@ -16,6 +16,9 @@
 .add_post__area{
     display: block;
     margin-bottom: 10px;
+    width: 300px;
+    height: 100px;
+    resize: none;
 }
 .add_post__btn{
     padding: 10px;
