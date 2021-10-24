@@ -15,13 +15,11 @@ const Dialogs = (props) => {
 
   let addMessage = ()=> {
     let text = newMessageElement.current.value;
-    alert(text)
+    props.addMessage(text)
   };
   return (
     <div className={s.dialogs}>
       <div className={s.dialogs_items}>{dialogsElements}</div>
-      <div className={s.line}></div>
-
       <div className={s.messages}>
         <div> {messagesElements}</div>
         <div>

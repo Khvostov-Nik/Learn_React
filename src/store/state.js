@@ -52,5 +52,13 @@ export let addPost = (postMessage)=>{
   };
   state.profilePage.posts.push(newPost)
 };
+export let addMessage = (Message)=>{
+  let lengthId = state.dialogPage.messages.length
+  let newMessage = {
+    id:lengthId + 1,
+    message: Message,
+  };
+  state.dialogPage.messages.push(newMessage)
+};
 
 export default state;

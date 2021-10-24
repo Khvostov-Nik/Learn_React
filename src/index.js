@@ -5,11 +5,12 @@ import App from "./Component/App/App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter} from "react-router-dom";
 import {addPost} from "./store/state";
+import {addMessage} from "./store/state";
 import state from "./store/state";
 
 ReactDOM.render(
   <BrowserRouter>
-    <App state={state} addPost={addPost} />
+    <App state={state} addPost={addPost} addMessage={addMessage}/>
   </BrowserRouter>,
   document.getElementById("root")
 );
