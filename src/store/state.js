@@ -46,9 +46,9 @@ let state = {
 export let addPost = (postMessage)=>{
   let lengthId = state.profilePage.posts.length
   let newPost = {
-    id: lengthId + 1,
-    message:postMessage,
-    likeCount:0
+    id:lengthId + 1,
+    message: postMessage,
+    likeCount: 0
   };
   state.profilePage.posts.push(newPost)
 };
