@@ -1,3 +1,4 @@
+import {rerenderTree} from 'rerender'
 let state = {
   profilePage: {
     posts: [
