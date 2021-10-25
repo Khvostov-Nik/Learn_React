@@ -52,6 +52,7 @@ export let addPost = (postMessage)=>{
     likeCount: 0
   };
   state.profilePage.posts.push(newPost)
+  rerenderTree()
 };
 export let addMessage = (Message)=>{
   let lengthId = state.dialogPage.messages.length
@@ -60,6 +61,7 @@ export let addMessage = (Message)=>{
     message: Message,
   };
   state.dialogPage.messages.push(newMessage)
+  rerenderTree()
 };
 
 export default state;
