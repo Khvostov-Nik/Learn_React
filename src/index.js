@@ -1,4 +1,4 @@
-import {rerenderTree} from 'rerender'
+import rerenderTree from './render'
 import reportWebVitals from "./reportWebVitals";
 
 
