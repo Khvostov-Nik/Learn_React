@@ -22,12 +22,12 @@ const Dialogs = (props) => {
     <div className={s.dialogs}>
       <div className={s.dialogs_items}>{dialogsElements}</div>
       <div className={s.messages}>
-        <div> {messagesElements}</div>
+          <div> {messagesElements}</div>
         <div>
           <textarea
             className={s.add_message__area}
             ref={newMessageElement}
-          ></textarea>
+            ></textarea>
           <button className={s.add_message} onClick={addMessage}>Add mesage</button>
         </div>
       </div>

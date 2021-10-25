@@ -28,5 +28,6 @@
 .add_message {
     display: flex;
     padding: 15px;
-    margin: 0 auto;
+    margin: 20px auto;
+
 }
