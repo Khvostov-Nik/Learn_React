@@ -1,8 +1,8 @@
 import rerenderTree from './render'
 import reportWebVitals from "./reportWebVitals";
+import state from "./store/state";
 
-
-rerenderTree()
+rerenderTree(state)
 
 
 reportWebVitals();
