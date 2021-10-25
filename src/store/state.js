@@ -9,7 +9,8 @@ let state = {
         likeCount: "12",
       },
       { id: 2, message: "Lorem ipsum dolor sit.", likeCount: "8" },
-      { id: 3, message: "Lorem ipsum dolor sit amet..", likeCount: "11" },
+      // { id: 3, message: "Lorem ipsum dolor sit amet..", likeCount: "11" },
+      // { id: 4, message: "Lorem ipsum dolor sit amet.flkgm.", likeCount: "19" },
     ],
   },
   dialogPage: {

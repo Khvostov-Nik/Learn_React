@@ -1,6 +1,7 @@
 
 .app-wraper {
     max-width: 1200px;
+    min-height: 100vh;
     display: grid;
     grid-template-areas:
     "h h"
@@ -8,7 +9,6 @@
     grid-template-rows: 60px 1fr;
     grid-template-columns: 2fr 10fr;
     margin: 0 auto;
-    height: 100vh;
 }
 
 .app-wraper-content {
