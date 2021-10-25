@@ -10,15 +10,13 @@
 }
 
 .messages {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     padding: 20px;
+    position: relative;
     background-color: rgb(161, 209, 253);
+    
 }
 
 .add_message__area {
-    display: block;
     margin-bottom: 10px;
     width: 100%;
     height: 100px;
@@ -26,8 +24,7 @@
 }
 
 .add_message {
-    display: flex;
+    display: block;
     padding: 15px;
     margin: 20px auto;
-
 }
