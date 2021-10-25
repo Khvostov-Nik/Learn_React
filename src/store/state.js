@@ -9,18 +9,19 @@ let state = {
         likeCount: "12",
       },
       { id: 2, message: "Lorem ipsum dolor sit.", likeCount: "8" },
-      // { id: 3, message: "Lorem ipsum dolor sit amet..", likeCount: "11" },
-      // { id: 4, message: "Lorem ipsum dolor sit amet.flkgm.", likeCount: "19" },
+      { id: 3, message: "Lorem ipsum dolor sit amet..", likeCount: "11" },
+      { id: 4, message: "Lorem ipsum dolor sit amet.flkgm.", likeCount: "19" },
     ],
+    newPostText:''
   },
   dialogPage: {
+    newMessageText:'',
     dialogs: [
       { id: 1, name: "Kolayn" },
       { id: 2, name: "Dimych" },
       { id: 3, name: "Ivan" },
       { id: 4, name: "Valera" },
     ],
-
     messages: [
       {
         id: 1,
@@ -46,24 +47,34 @@ let state = {
   },
 };
 
-export let addPost = (postMessage)=>{
+export let addPost = ()=>{
   let lengthId = state.profilePage.posts.length
   let newPost = {
     id:lengthId + 1,
-    message: postMessage,
+    message: state.profilePage.newPostText,
     likeCount: 0
   };
-  state.profilePage.posts.push(newPost)
+  state.profilePage.posts.push(newPost);
+  state.profilePage.newPostText = '';
   rerenderTree(state)
 };
-export let addMessage = (Message)=>{
+export let addMessage = ()=>{
   let lengthId = state.dialogPage.messages.length
   let newMessage = {
     id:lengthId + 1,
-    message: Message,
+    message: state.dialogPage.newMessageText,
   };
-  state.dialogPage.messages.push(newMessage)
+  state.dialogPage.messages.push(newMessage);
+  state.dialogPage.newMessageText = '';
   rerenderTree(state)
 };
+export let updateNewPostText = (newText)=>{
+  state.profilePage.newPostText = newText;
+  rerenderTree(state)
+}
+export let updateNewMessageText = (newText)=>{
+  state.dialogPage.newMessageText = newText;
+  rerenderTree(state)
+}
 
 export default state;
