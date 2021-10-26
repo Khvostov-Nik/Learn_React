@@ -20,7 +20,7 @@ const Dialogs = (props) => {
 
   let onMessageChang = () => {
     let text = newMessageElement.current.value;
-    props.dispatch({type:'UPDATE-NEW-MESSAGE-TEXT'});
+    props.dispatch({type:'UPDATE-NEW-MESSAGE-TEXT', newText: text});
   };
 
   return (
@@ -31,7 +31,7 @@ const Dialogs = (props) => {
           <textarea
             className={s.add_message__area}
             onChange={onMessageChang}
-            value={props.dialogPage.newMessageText}
+            value={props.newMessageText}
             ref={newMessageElement}
             placeholder="Текст нового"
           />

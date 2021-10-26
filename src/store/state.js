@@ -18,10 +18,10 @@ let store = {
           likeCount: "19",
         },
       ],
-      newPostText: "",
+      newPostText: "dddddd",
     },
     dialogPage: {
-      newMessageText: "",
+      newMessageText: '',
       dialogs: [
         { id: 1, name: "Kolayn" },
         { id: 2, name: "Dimych" },
@@ -65,7 +65,8 @@ let store = {
   },
 
  dispatch(action) {
-  if (action==='ADD-POST'){
+   
+  if (action.type === 'ADD-POST'){
     let lengthId = this._state.profilePage.posts.length;
     let newPost = {
       id: lengthId + 1,
@@ -76,11 +77,13 @@ let store = {
     this._state.profilePage.newPostText = "";
     this._callSubcribe(this._state);
   } 
-  else if (action==='UPDATE-NEW-POST-TEXT'){
+  else if (action.type==='UPDATE-NEW-POST-TEXT'){
+    
     this._state.profilePage.newPostText = action.newText;
     this._callSubcribe(this._state);
   } 
-  else if (action==='ADD-MESSAGE'){
+  else if (action.type==='ADD-MESSAGE'){
+    debugger
     let lengthId = this._state.dialogPage.messages.length;
     let newMessage = {
       id: lengthId + 1,
@@ -90,7 +93,7 @@ let store = {
     this._state.dialogPage.newMessageText = "";
     this._callSubcribe(this._state);
   } 
-  else if (action==='UPDATE-NEW-MESSAGE-TEXT'){
+  else if (action.type==='UPDATE-NEW-MESSAGE-TEXT'){
     this._state.dialogPage.newMessageText = action.newText;
     this._callSubcribe(this._state);
   }
