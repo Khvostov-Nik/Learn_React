@@ -2,13 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-import state, {
-  addPost,
-  addMessage,
-  updateNewPostText,
-  updateNewMessageText,
-  subscribe,
-} from "./store/state";
+import store from "./store/state";
 import App from "./Component/App/App";
 import "./index.css";
 
@@ -17,17 +11,17 @@ let rerenderTree = (state) => {
     <BrowserRouter>
       <App
         state={state}
-        addPost={addPost}
-        updateNewPostText={updateNewPostText}
-        updateNewMessageText={updateNewMessageText}
-        addMessage={addMessage}
+        addPost={store.addPost.bind(store)}
+        updateNewPostText={store.updateNewPostText.bind(store)}
+        updateNewMessageText={store.updateNewMessageText.bind(store)}
+        addMessage={store.addMessage.bind(store)}
       />
     </BrowserRouter>,
     document.getElementById("root")
   );
 };
 
-rerenderTree(state);
-subscribe(rerenderTree);
+rerenderTree(store.getState());
+store.subscribe(rerenderTree);
 
 reportWebVitals();
