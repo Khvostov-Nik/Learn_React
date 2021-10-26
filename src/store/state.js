@@ -78,7 +78,6 @@ export let updateNewMessageText = (newText) => {
   state.dialogPage.newMessageText = newText;
   rerenderTree(state);
 };
-
 export const subscribe = (observer) => {
   rerenderTree = observer;
 };
