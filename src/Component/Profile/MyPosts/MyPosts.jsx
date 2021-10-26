@@ -3,7 +3,7 @@ import s from "./MyPosts.module.css";
 import Post from "./Post/Post";
 
 const MyPosts = (props) => {
-  let postsElements = props.posts.map((post) => {
+  let postsElements = props.profilePage.posts.map((post) => {
     return (
       <Post id={post.id} message={post.message} likeCount={post.likeCount} />
     );
@@ -16,8 +16,8 @@ const MyPosts = (props) => {
   };
 
   let onPostChang = () => {
-    let newText = newPostElement.current.value;
-    props.dispatch({type: 'UPDATE-NEW-POST-TEXT', newText:newText});
+    let text = newPostElement.current.value;
+    props.dispatch({type: 'UPDATE-NEW-POST-TEXT', newText: text});
   };
 
   return (
@@ -28,7 +28,7 @@ const MyPosts = (props) => {
           <textarea
             className={s.add_post__area}
             onChange={onPostChang}
-            value={props.newPostText}
+            value={props.profilePage.newPostText}
             ref={newPostElement}
             placeholder="Текст нового поста"
           />

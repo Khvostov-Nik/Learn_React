@@ -4,6 +4,7 @@ let store = {
       console.log("change state");
     },
     profilePage: {
+      newPostText: "",
       posts: [
         {
           id: 1,
@@ -18,7 +19,6 @@ let store = {
           likeCount: "19",
         },
       ],
-      newPostText: "dddddd",
     },
     dialogPage: {
       newMessageText: '',

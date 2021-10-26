@@ -31,7 +31,7 @@ const Dialogs = (props) => {
           <textarea
             className={s.add_message__area}
             onChange={onMessageChang}
-            value={props.newMessageText}
+            value={props.dialogPage.newMessageText}
             ref={newMessageElement}
             placeholder="Текст нового"
           />
