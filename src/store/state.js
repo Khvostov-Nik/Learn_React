@@ -1,4 +1,6 @@
-import rerenderTree from './../render'
+let rerenderTree = () => {
+  console.log("change state");
+};
 
 let state = {
   profilePage: {
@@ -12,10 +14,10 @@ let state = {
       { id: 3, message: "Lorem ipsum dolor sit amet..", likeCount: "11" },
       { id: 4, message: "Lorem ipsum dolor sit amet.flkgm.", likeCount: "19" },
     ],
-    newPostText:''
+    newPostText: "",
   },
   dialogPage: {
-    newMessageText:'',
+    newMessageText: "",
     dialogs: [
       { id: 1, name: "Kolayn" },
       { id: 2, name: "Dimych" },
@@ -47,34 +49,38 @@ let state = {
   },
 };
 
-export let addPost = ()=>{
-  let lengthId = state.profilePage.posts.length
+export let addPost = () => {
+  let lengthId = state.profilePage.posts.length;
   let newPost = {
-    id:lengthId + 1,
+    id: lengthId + 1,
     message: state.profilePage.newPostText,
-    likeCount: 0
+    likeCount: 0,
   };
   state.profilePage.posts.push(newPost);
-  state.profilePage.newPostText = '';
-  rerenderTree(state)
+  state.profilePage.newPostText = "";
+  rerenderTree(state);
 };
-export let addMessage = ()=>{
-  let lengthId = state.dialogPage.messages.length
+export let addMessage = () => {
+  let lengthId = state.dialogPage.messages.length;
   let newMessage = {
-    id:lengthId + 1,
+    id: lengthId + 1,
     message: state.dialogPage.newMessageText,
   };
   state.dialogPage.messages.push(newMessage);
-  state.dialogPage.newMessageText = '';
-  rerenderTree(state)
+  state.dialogPage.newMessageText = "";
+  rerenderTree(state);
 };
-export let updateNewPostText = (newText)=>{
+export let updateNewPostText = (newText) => {
   state.profilePage.newPostText = newText;
-  rerenderTree(state)
-}
-export let updateNewMessageText = (newText)=>{
+  rerenderTree(state);
+};
+export let updateNewMessageText = (newText) => {
   state.dialogPage.newMessageText = newText;
-  rerenderTree(state)
-}
+  rerenderTree(state);
+};
+
+export const subscribe = (observer) => {
+  rerenderTree = observer;
+};
 
 export default state;
