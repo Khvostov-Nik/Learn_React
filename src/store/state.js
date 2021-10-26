@@ -1,5 +1,8 @@
 let store = {
   _state: {
+    _callSubcribe() {
+      console.log("change state");
+    },
     profilePage: {
       posts: [
         {
@@ -46,16 +49,23 @@ let store = {
           message:
             "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi veniam quis aperiam quibusdam alias!",
         },
+        {
+          id: 6,
+          message:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi veniam quis aperiam quibusdam alias!",
+        },
       ],
     },
   },
   getState() {
     return this._state;
   },
-  callSubcribe() {
-    console.log("change state");
+  subscribe(observer) {
+    this._callSubcribe = observer;
   },
-  addPost() {
+
+ dispatch(action) {
+  if (action==='ADD-POST'){
     let lengthId = this._state.profilePage.posts.length;
     let newPost = {
       id: lengthId + 1,
@@ -64,9 +74,13 @@ let store = {
     };
     this._state.profilePage.posts.push(newPost);
     this._state.profilePage.newPostText = "";
-    this.callSubcribe(this._state);
-  },
-  addMessage() {
+    this._callSubcribe(this._state);
+  } 
+  else if (action==='UPDATE-NEW-POST-TEXT'){
+    this._state.profilePage.newPostText = action.newText;
+    this._callSubcribe(this._state);
+  } 
+  else if (action==='ADD-MESSAGE'){
     let lengthId = this._state.dialogPage.messages.length;
     let newMessage = {
       id: lengthId + 1,
@@ -74,19 +88,14 @@ let store = {
     };
     this._state.dialogPage.messages.push(newMessage);
     this._state.dialogPage.newMessageText = "";
-    this.callSubcribe(this._state);
-  },
-  updateNewPostText(newText) {
-    this._state.profilePage.newPostText = newText;
-    this.callSubcribe(this._state);
-  },
-  updateNewMessageText(newText) {
-    this._state.dialogPage.newMessageText = newText;
-    this.callSubcribe(this._state);
-  },
-  subscribe(observer) {
-    this.callSubcribe = observer;
-  },
+    this._callSubcribe(this._state);
+  } 
+  else if (action==='UPDATE-NEW-MESSAGE-TEXT'){
+    this._state.dialogPage.newMessageText = action.newText;
+    this._callSubcribe(this._state);
+  }
+ },
+
 };
 
 export default store;

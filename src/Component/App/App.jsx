@@ -20,8 +20,8 @@ const App = (props) => {
           render={() => (
             <Profile
               profilePage={props.state.profilePage}
-              updateNewPostText={props.updateNewPostText}
-              addPost={props.addPost}
+              dispatch={props.dispatch}
+             
             />
           )}
         />
@@ -30,8 +30,8 @@ const App = (props) => {
           render={() => (
             <Dialogs
               dialogPage={props.state.dialogPage}
-              updateNewMessageText={props.updateNewMessageText}
-              addMessage={props.addMessage}
+              dispatch={props.dispatch}
+             
             />
           )}
         />
