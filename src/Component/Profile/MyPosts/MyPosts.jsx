@@ -10,14 +10,13 @@ const MyPosts = (props) => {
     );
   });
 
-  let newPostElement = React.createRef();
 
   let addPost = () => {
     props.dispatch(addPostAction());
   };
 
-  let onPostChang = () => {
-    let text = newPostElement.current.value; 
+  let onPostChang = (e) => {
+    let text =e.target.value; 
     props.dispatch(updateNewPostTextAction(text));
   };
 
@@ -30,7 +29,6 @@ const MyPosts = (props) => {
             className={s.add_post__area}
             onChange={onPostChang}
             value={props.profilePage.newPostText}
-            ref={newPostElement}
             placeholder="Текст нового поста"
           />
           <button className={s.add_post__btn} onClick={addPost}>
