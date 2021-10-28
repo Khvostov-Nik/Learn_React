@@ -1,7 +1,9 @@
 import React from "react";
-import { addPostAction, updateNewPostTextAction } from "./../../../redux/profileReducer";
+import {
+  addPostAction,
+  updateNewPostTextAction
+} from "./../../../redux/profileReducer";
 import MyPosts from "./MyPosts";
-
 
 const MyPostsContainer = (props) => {
   let state = props.store.getState();
@@ -11,11 +13,17 @@ const MyPostsContainer = (props) => {
   };
 
   let onPostChang = (text) => {
-    props.store.dispatch(updateNewPostTextAction(text))
+    props.store.dispatch(updateNewPostTextAction(text));
   };
 
   return (
-   <MyPosts onPostChang={onPostChang} addPost={addPost} posts={state.profilePage.posts}/>)
+    <MyPosts
+      onPostChang={onPostChang}
+      addPost={addPost}
+      posts={state.profilePage.posts}
+      newPostText={state.profilePage.newPostText}
+    />
+  );
 };
 
 export default MyPostsContainer;

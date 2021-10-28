@@ -5,18 +5,18 @@ let initionalState = {
   newPostText: "",
   posts: [
     {
-      postsId: 1,
+      postId: 1,
       message: "Lorem ipsum dolor sit amet consectetur.",
       likeCount: "12",
     },
-    { postsId: 2, message: "Lorem ipsum dolor sit.", likeCount: "8" },
+    { postId: 2, message: "Lorem ipsum dolor sit.", likeCount: "8" },
     {
-      postsId: 3,
+      postId: 3,
       message: "Lorem ipsum dolor sit amet..",
       likeCount: "11",
     },
     {
-      postsId: 4,
+      postId: 4,
       message: "Lorem ipsum dolor sit amet.flkgm.",
       likeCount: "19",
     },
@@ -28,7 +28,7 @@ const profileReducer = (state = initionalState, action) => {
     case ADD_POST:
       let lengthId = state.posts.length;
       let newPost = {
-        postsId: lengthId + 1,
+        postId: lengthId + 1,
         message: state.newPostText,
         likeCount: 0,
       };

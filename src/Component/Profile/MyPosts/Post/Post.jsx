@@ -10,7 +10,7 @@ const Post = (props) => {
         src="https://www.ejin.ru/wp-content/uploads/2018/10/crew4_1024.png"
         alt=""
       />
-        {props.postsId}<span>) </span>
+        {props.postId}<span>) </span>
         {props.message}
       <div>
         <span>Like {props.likeCount}</span>
