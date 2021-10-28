@@ -1,5 +1,5 @@
 import React from "react";
-import { addMessageAction, updateNewMessageTextAction } from "../../redux/state";
+import { addMessageAction, updateNewMessageTextAction } from "./../../redux/dialogsReducer";
 import Dialog from "./DialogItem/Dialog";
 import s from "./Dialogs.module.css";
 import Messages from "./Message/Message";
@@ -34,7 +34,7 @@ const Dialogs = (props) => {
             value={props.dialogPage.newMessageText}
             placeholder="Текст нового"
           />
-          <button className={s.add_message} onClick={addMessage}>
+          <button type='btn' className={s.add_message} onClick={addMessage}>
             Add mesage
           </button>
         </div>

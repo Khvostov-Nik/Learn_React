@@ -10,11 +10,12 @@
 }
 
 .messages {
-    padding: 20px;
     position: relative;
     border-radius: 20px 20px 0 0;
     background-color: rgb(161, 209, 253);
+    margin-top: 15px;
     margin-right: 2px;
+    padding: 20px;
     
 }
 
@@ -29,4 +30,5 @@
     display: block;
     padding: 15px;
     margin: 20px auto;
+    cursor: pointer;
 }

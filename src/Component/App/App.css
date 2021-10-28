@@ -9,9 +9,11 @@
     grid-template-rows: 60px 1fr;
     grid-template-columns: 2fr 10fr;
     margin: 0 auto;
+    background-color: rgb(95, 174, 247);
 }
 
 .app-wraper-content {
     grid-area: c;
     background-color: rgb(95, 174, 247);
+    margin-top: 20px;
 }
