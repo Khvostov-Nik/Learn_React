@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./Component/App/App";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import store from "./redux/store";
+import store from "./redux/reduxStor";
 
 let rerenderTree = (state) => {
   ReactDOM.render(
@@ -19,6 +19,8 @@ let rerenderTree = (state) => {
 };
 
 rerenderTree(store.getState());
-store.subscribe(rerenderTree);
+store.subscribe(()=>{
+  let state = store.getState() ;
+  rerenderTree(state)});
 
 reportWebVitals();
