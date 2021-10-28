@@ -1,13 +1,13 @@
 import React from "react";
-import "./App.css";
+import { Route } from "react-router-dom";
 import Header from "../Header/Header";
 import Navbar from "../Navbar/Navbar";
 import Profile from "../Profile/Profile";
 import Dialogs from "./../Dialogs/Dialogs";
-import News from "./../News/News";
 import Music from "./../Music/Music";
+import News from "./../News/News";
 import Setting from "./../Setting/Setting";
-import { Route } from "react-router-dom";
+import "./App.css";
 
 const App = (props) => {
   return (
