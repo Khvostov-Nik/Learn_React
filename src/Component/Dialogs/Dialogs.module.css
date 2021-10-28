@@ -12,7 +12,9 @@
 .messages {
     padding: 20px;
     position: relative;
+    border-radius: 20px 20px 0 0;
     background-color: rgb(161, 209, 253);
+    margin-right: 2px;
     
 }
 
