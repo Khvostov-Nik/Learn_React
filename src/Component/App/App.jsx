@@ -3,11 +3,11 @@ import { Route } from "react-router-dom";
 import Header from "../Header/Header";
 import Navbar from "../Navbar/Navbar";
 import Profile from "../Profile/Profile";
-import Dialogs from "./../Dialogs/Dialogs";
 import Music from "./../Music/Music";
 import News from "./../News/News";
 import Setting from "./../Setting/Setting";
 import "./App.css";
+import DialogsContainer from './../Dialogs/DialogsContainer';
 
 const App = (props) => {
   return (
@@ -26,10 +26,8 @@ const App = (props) => {
         <Route
           path="/Dialogs"
           render={() => (
-            <Dialogs
-              dialogPage={props.state.dialogPage}
-              dispatch={props.dispatch}
-             
+            <DialogsContainer
+              store={props.store}
             />
           )}
         />
