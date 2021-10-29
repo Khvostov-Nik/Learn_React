@@ -6,7 +6,7 @@ import {
 import Dialogs from "./Dialogs";
 
 const DialogsContainer = (props) => {
-  let state = props.store.getState();
+  let state = props.store.getState().dialogPage;
 
   let addMessage = () => {
     props.store.dispatch(addMessageAction());
@@ -20,9 +20,7 @@ const DialogsContainer = (props) => {
     <Dialogs
       addMessage={addMessage}
       onMessageChang={onMessageChang}
-      dialogs={state.dialogPage.dialogs}
-      messages={state.dialogPage.messages}
-      newMessageText={state.dialogPage.newMessageText}
+      dialogPage={state}
     />
   );
 };

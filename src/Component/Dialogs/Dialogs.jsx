@@ -4,14 +4,13 @@ import s from "./Dialogs.module.css";
 import Messages from "./Message/Message";
 
 const Dialogs = (props) => {
-  let dialogsElements = props.dialogs.map((dialog) => {
+  let dialogsElements = props.dialogPage.dialogs.map((dialog) => {
     return <Dialog userId={dialog.userId} name={dialog.name} />;
   });
 
-  let messagesElements = props.messages.map((message) => {
+  let messagesElements = props.dialogPage.messages.map((message) => {
     return <Messages messageId={message.messageId} message={message.message} />;
   });
-
 
   let addMessage = () => {
     props.addMessage();
@@ -30,7 +29,7 @@ const Dialogs = (props) => {
           <textarea
             className={s.add_message__area}
             onChange={onMessageChang}
-            value={props.newMessageText}
+            value={props.dialogPage.newMessageText}
             placeholder="Текст нового"
           />
           <button type='btn' className={s.add_message} onClick={addMessage}>
