@@ -7,21 +7,13 @@ import "./index.css";
 import store from "./redux/reduxStor";
 import reportWebVitals from "./reportWebVitals";
 
-let rerenderTree = (state) => {
-  ReactDOM.render(
-    <BrowserRouter>
-      <Provider store = {store}>
-        <App />
-      </Provider>,
-    </BrowserRouter>,
-    document.getElementById("root")
-  );
-};
-
-rerenderTree(store.getState());
-store.subscribe(() => {
-  let state = store.getState();
-  rerenderTree(state);
-});
+ReactDOM.render(
+  <BrowserRouter>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </BrowserRouter>,
+  document.getElementById("root")
+);
 
 reportWebVitals();
