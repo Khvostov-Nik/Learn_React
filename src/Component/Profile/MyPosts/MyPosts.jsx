@@ -9,6 +9,7 @@ const MyPosts = (props) => {
         postId={post.postId}
         message={post.message}
         likeCount={post.likeCount}
+        key = {post.postId}
       />
     );
   });
