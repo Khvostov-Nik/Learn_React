@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import App from "./Component/App/App";
 import "./index.css";
@@ -9,7 +10,9 @@ import reportWebVitals from "./reportWebVitals";
 let rerenderTree = (state) => {
   ReactDOM.render(
     <BrowserRouter>
-      <App state={state} dispatch={store.dispatch.bind(store)} store={store} />
+      <Provider store = {store}>
+        <App />
+      </Provider>,
     </BrowserRouter>,
     document.getElementById("root")
   );
