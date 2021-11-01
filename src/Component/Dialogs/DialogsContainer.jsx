@@ -9,7 +9,6 @@ import Dialogs from "./Dialogs";
 let mapStateToProps =(state)=>{
   return{
     dialogPage: state.dialogPage,
-    newMessageText:state.dialogPage.newMessageText
   }
 };
 let mapDispatchToProps =(dispatch)=>{
