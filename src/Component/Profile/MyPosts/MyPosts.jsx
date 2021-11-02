@@ -6,10 +6,10 @@ const MyPosts = (props) => {
   let postsElements = props.posts.map((post) => {
     return (
       <Post
-        postId={post.postId}
+        postId={post.id}
         message={post.message}
         likeCount={post.likeCount}
-        key = {post.postId}
+        key = {post.id}
       />
     );
   });
