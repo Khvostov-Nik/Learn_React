@@ -1,3 +1,42 @@
-/* .user{
+.user__wrap {
+    margin-left: 30px;
+}
+
+.avatar {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    padding: 5px 20px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.userInfo {
+    max-width: 25vw;
+    margin-bottom: 30px;
+    font-size: 20px;
     
-} */
+}
+
+.user_name,
+.user_status {
+    margin-bottom: 15px;
+}
+
+.status_btn {
+    margin-left: 15px;
+    padding: 8px;
+}
+
+.userLoc {
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.userLoc_country {
+    margin-bottom: 15px;
+    margin-right: 30px;
+}
