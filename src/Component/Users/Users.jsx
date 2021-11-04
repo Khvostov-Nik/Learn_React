@@ -40,7 +40,7 @@ let Users = (props) => {
           <div className={s.userInfo}>
             <div className={s.user}>
               <div className={s.user_status}>
-                {u.status} <button className={s.status_btn}>send status</button>
+                {u.status}
               </div>
               <div className={s.user_name}>{u.fullName}</div>
             </div>
