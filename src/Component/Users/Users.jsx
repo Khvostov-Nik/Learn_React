@@ -14,7 +14,7 @@ class Users extends React.Component {
         this.props.setTotalCount(response.data.totalCount);
       });
   }
-  onPagechanged = (pageNumber) => {
+  onPageChanged = (pageNumber) => {
     this.props.setCurrentPage(pageNumber);
     axios
       .get(
@@ -40,7 +40,7 @@ class Users extends React.Component {
                     : s.page
                 }
                 onClick={() => {
-                  this.onPagechanged(p);
+                  this.onPageChanged(p);
                 }}
               >
                 {p}
