@@ -10,9 +10,14 @@
 }
 
 .btn {
+    width: 100px;
     padding: 5px 20px;
     margin-bottom: 15px;
     cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(100, 210, 260);
+
 }
 
 .userInfo {
