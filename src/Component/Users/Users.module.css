@@ -41,3 +41,18 @@
     margin-bottom: 15px;
     margin-right: 30px;
 }
+
+.pagination{
+
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.page{
+    display: inline-block;
+margin: 0 5px;
+cursor: pointer;
+}
+.active{
+    font-weight: bold;
+    
+}
