@@ -4,6 +4,9 @@
     margin-bottom: 10px;
     margin-left: 10px;
 }
+.dialog:hover{
+    background-color: rgb(138, 198, 255);
+}
 .dialog_link {
     display: block;
     padding: 20px;
