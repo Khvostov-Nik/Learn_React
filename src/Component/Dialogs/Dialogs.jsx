@@ -1,22 +1,29 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Dialog from "./DialogItem/Dialog";
 import s from "./Dialogs.module.css";
 import Messages from "./Message/Message";
 
 const Dialogs = (props) => {
+
+  let scrollRef = useRef(null);
+
   let dialogsElements = props.dialogPage.dialogs.map((dialog) => {
     return <Dialog userId={dialog.id} name={dialog.name} key={dialog.id} />;
   });
 
-  let messagesElements = props.dialogPage.messages.map((message) => {
-    return (
-      <Messages
-        messageId={message.id}
-        message={message.message}
-        key={message.id}
-      />
-    );
-  });
+  let messagesElements = props.dialogPage.messages.map((message) => (
+    <div ref={scrollRef}>
+        <Messages
+          messageId={message.id}
+          message={message.message}
+          key={message.id}
+        />
+      </div>
+  ));
+
+  useEffect(() => {
+    scrollRef.current?.scrollIntoView({ behavior: "smooth"} )
+  }, [messagesElements]);
 
   let addMessage = () => {
     props.addMessage();
