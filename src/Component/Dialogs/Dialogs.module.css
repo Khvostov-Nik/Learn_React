@@ -2,29 +2,27 @@
     display: grid;
     grid-template-columns: 3fr 9fr;
     height: 100%;
-   
 }
 
 .dialogs_items {
-    padding-top: 15px;
     margin-right: 10px;
 }
 
-.messages {
+.messages__wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90vh;
     border-radius: 20px 20px 0 0;
-    background-color: rgb(161, 209, 253);
-    margin-top: 15px;
-    margin-right: 2px;
-    padding: 20px;
-   
-    
 }
-.wrap_mesages{
-    height: 60vh;
+.mesages{
+    padding: 10px;
+    height: 100%;
     overflow-y: scroll;
 }
-
-
+.addMessage__wrap{
+   margin: 5px;
+}
 .add_message__area {
     margin-bottom: 5px;
     width: 100%;
@@ -34,7 +32,7 @@
     resize: none;
 }
 
-.add_message {
+.add_message__btn {
     display: block;
     padding: 15px;
     margin: 5px auto;

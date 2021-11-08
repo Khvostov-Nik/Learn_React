@@ -37,8 +37,8 @@ const Dialogs = (props) => {
   return (
     <div className={s.dialogs}>
       <div className={s.dialogs_items}>{dialogsElements}</div>
-      <div className={s.messages}>
-        <div className={s.wrap_mesages}> {messagesElements}</div>
+      <div className={s.messages__wrap}>
+        <div className={s.mesages}> {messagesElements}</div>
         <div className={s.addMessage__wrap}>
           <textarea
             className={s.add_message__area}
@@ -46,7 +46,7 @@ const Dialogs = (props) => {
             value={props.dialogPage.newMessageText}
             placeholder=" Текст нового"
           />
-          <button type="btn" className={s.add_message} onClick={addMessage}>
+          <button type="btn" className={s.add_message__btn} onClick={addMessage}>
             Add mesage
           </button>
       </div>
