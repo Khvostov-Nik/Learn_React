@@ -20,7 +20,7 @@ const MyPosts = (props) => {
 
   let onPostChang = (e) => {
     let text = e.target.value;
-    props.onPostChang(text);
+    props.updateNewPostText(text);
   };
 
   return (
