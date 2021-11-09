@@ -5,9 +5,7 @@
     border-radius: 0 20px 0 0;
     grid-area: n;
 }
-.item{
-    border-bottom:  rgba(44, 26, 0, 0.3) 2px solid;
-}
+
 .item:hover{
     background-color: rgb(209, 157, 79);;
 }
