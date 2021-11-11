@@ -1,14 +1,17 @@
 import React from "react";
+import Preloader from "./../../common/preloader/Preloader";
 import s from "./ProfileInfo.module.css";
-const Profileinfo = () => {
+const Profileinfo = (props) => {
+  if (!props.profile) {
+    return <Preloader />;
+  }
   return (
     <div className={s.profileinfo}>
-      <img
-        className={s.img_profile}
-        src="https://c.wallhere.com/photos/1f/82/3840x1200_px_landscape_plains-662119.jpg!d"
-        alt=""
-      />
-      <div className={s.description_block}>ava + description</div>
+      <div className={s.description_block}>
+        <img className={s.ava} src={props.profile.photos.large} alt="" />
+        <div className={s.name}>{props.profile.fullName}</div>
+        <div className={s.aboutMe}>{props.profile.aboutMe}</div>
+      </div>
     </div>
   );
 };

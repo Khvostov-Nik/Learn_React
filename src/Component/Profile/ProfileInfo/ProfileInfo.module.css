@@ -1,9 +1,19 @@
 /* .profileInfo{
 
 } */
-.img_profile {
-  width: 100%;
-}
 .description_block{
-    padding: 20px;
+    padding-left: 20px;
+}
+.ava{
+    height: 300px;
+    width: 300px;
+    margin-bottom: 20px;
+}
+.name{
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.aboutMe{
+    font-size: 20px;
+    font-weight: bold;
 }
