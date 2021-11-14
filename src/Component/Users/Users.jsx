@@ -1,3 +1,4 @@
+import { Pagination } from "@mui/material";
 import React from "react";
 import { NavLink } from "react-router-dom";
 import userPhoto from "./../../img/avatar.png";
@@ -11,22 +12,19 @@ const Users = (props) => {
   }
   return (
     <div className={s.user__wrap}>
-      <div className={s.pagination}>
-        {pages.map((p) => {
-          return (
-            <span
-              className={
-                props.currentPage === p ? s.page + " " + s.active : s.page
-              }
-              onClick={() => {
-                props.onPageChanged(p);
-              }}
-            >
-              {p}
-            </span>
-          );
-        })}
-      </div>
+      <Pagination
+        className={s.pagination}
+        count={pagesCount}
+        variant="outlined"
+        shape="rounded"
+        size="medium"
+        siblingCount={5}
+        showFirstButton
+        showLastButton
+        onChange={(_, p) => {
+          props.onPageChanged(p);
+        }}
+      />
       {props.users.map((u) => (
         <div key={u.id}>
           <NavLink to={"/Profile/" + u.id}>

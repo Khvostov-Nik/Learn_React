@@ -44,25 +44,10 @@
 }
 
 .pagination {
-
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left: -28px;
     margin-bottom: 20px;
     font-size: 20px;
-}
-
-.page {
-    display: inline-block;
-    text-align: center;
-    justify-content: center;
-    height: 30px;
-    min-width: 30px;
-    margin: 2px;
-    padding: 2px 4px 4px 4px;
-    border: 2px solid gray;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.active {
-    font-weight: bold;
-
 }
