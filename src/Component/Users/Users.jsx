@@ -18,9 +18,7 @@ const Users = (props) => {
         variant="outlined"
         shape="rounded"
         size="medium"
-        siblingCount={5}
-        showFirstButton
-        showLastButton
+        siblingCount={6}
         onChange={(_, p) => {
           props.onPageChanged(p);
         }}
