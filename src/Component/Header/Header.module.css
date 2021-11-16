@@ -8,3 +8,15 @@
     grid-area: h;
     background-color: rgb(95, 174, 247);
 }
+.login__block{
+    float: right;
+
+}
+.login__link{
+    display: block;
+    padding: 20px;
+    cursor: pointer;
+    color:#fff;
+    font-size: 20px;
+    font-weight: bold;
+}
