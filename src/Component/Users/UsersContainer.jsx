@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { getUsers } from "../../api/api";
+import { userAPI } from "../../api/api";
 import {
   follow,
   setCurrentPage,
@@ -15,7 +15,7 @@ import Users from "./Users";
 class UsersContainer extends React.Component {
   componentDidMount() {
     this.props.toggleIsFeatching(true);
-    getUsers(this.props.currentPage, this.props.pageSize).then((data) => {
+    userAPI.getUsers(this.props.currentPage, this.props.pageSize).then((data) => {
       this.props.toggleIsFeatching(false);
       this.props.setUsers(data.items);
       this.props.setTotalCount(data.totalCount);
@@ -24,7 +24,7 @@ class UsersContainer extends React.Component {
   onPageChanged = (pageNumber) => {
     this.props.setCurrentPage(pageNumber);
     this.props.toggleIsFeatching(true);
-    getUsers(pageNumber, this.props.pageSize).then((data) => {
+    userAPI.getUsers(pageNumber, this.props.pageSize).then((data) => {
       this.props.toggleIsFeatching(false);
       this.props.setUsers(data.items);
     });

@@ -1,7 +1,7 @@
 import { Pagination } from "@mui/material";
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { follow, unFollow } from "../../api/api";
+import {userAPI } from "../../api/api";
 import userPhoto from "./../../img/avatar.png";
 import s from "./Users.module.css";
 
@@ -43,7 +43,7 @@ const Users = (props) => {
                 <button
                   className={s.btn}
                   onClick={() => {
-                    unFollow(u.id).then((data) => {
+                    userAPI.unFollow(u.id).then((data) => {
                       if (data.resultCode === 0) {
                         props.unfollow(u.id);
                       }
@@ -56,7 +56,7 @@ const Users = (props) => {
                 <button
                   className={s.btn}
                   onClick={() => {
-                    follow(u.id).then((data) => {
+                    userAPI.follow(u.id).then((data) => {
                       if (data.resultCode === 0) {
                         props.follow(u.id);
                       }
